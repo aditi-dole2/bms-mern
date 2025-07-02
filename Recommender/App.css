@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.styled-button {
+  background: linear-gradient(to right, #ff8c00, #ffa500);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button:hover {
+  background: linear-gradient(to right, #ffa500, #ff8c00);
+  transform: scale(1.05);
+}
+
+.styled-button:active {
+  transform: scale(0.95);
+}

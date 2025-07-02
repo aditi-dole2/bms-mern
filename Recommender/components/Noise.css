@@ -1,0 +1,9 @@
+.noise-overlay {
+    position: fixed; /* Ensure it stays fixed in the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire width */
+    height: 100%; /* Cover the entire height */
+    pointer-events: none; /* Prevent interference with interactions */
+    z-index: -1; /* Push it behind all other content */
+}

@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Rakkas';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url('/src/assets/fonts/Rakkas-Regular.ttf') format('truetype');
+}
+
+:root {
+  font-family: Rakkas, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.bttn {
+  border: 1px solid #b7b7b799;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #5f00b3;
+  border-radius: 24px;
+  padding: 0.4em 1.2em;
+  color: #ffff;
+  transition: background-color 0.3s ease;
+  pointer-events: all;
+  box-shadow: 0px 0px 63px 4px #6b6b6b;
+  box-shadow: 0px 0px 63px 4px #6736fcab;
+  animation: fade 3s ease-in-out forwards;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.bttnNEXT {
+  border: 1px solid #b7b7b799;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #5f00b3;
+  border-radius: 24px;
+  padding: 0.4em 1.2em;
+  color: #ffff;
+  transition: background-color 0.3s ease;
+  pointer-events: all;
+  box-shadow: 0px 0px 63px 4px #8c36fce3;
+  animation: fade 2s ease-in-out forwards;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.bttn:hover {
+  background-color: #7a7a7a;
+}
+.bttnNEXT:hover {
+  background-color: #cefdc7;
+}
+
+
+.bttn span {
+  color: #ffffff9c; /* Adjust this color to change intensity/style */
+
+  background: linear-gradient(
+  
+    120deg,
+  
+    rgba(255, 255, 255, 0) 40%,
+  
+    rgba(255, 255, 255, 0.8) 50%,
+  
+    rgba(255, 255, 255, 0) 60%
+  
+  );
+  
+  background-size: 200% 100%;
+  
+  -webkit-background-clip: text;
+  
+  background-clip: text;
+  
+  display: inline-block;
+  
+  animation: shine-text 2s linear infinite; /* Continuous animation */
+}
+
+/* Keyframes for the text shine animation */
+@keyframes shine-text {
+  0% {
+
+    background-position: 100%;
+  
+  }
+  
+  100% {
+  
+    background-position: -100%;
+  
+  }
+}
+
+/* Keyframes for the shine animation */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes fade {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.genre-button {
+  background-color: #4a4a4a;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.genre-button:hover {
+  background-color: #7a7a7a;
+}
+
+
+.loader {
+  width: 0;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: #FFF;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  animation: animFw 8s linear infinite;
+}
+  .loader::after,
+  .loader::before {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background: #FFF;
+    position: absolute;
+    top: 9px;
+    right: -2px;
+    opacity: 0;
+    transform: rotate(-45deg) translateX(0px);
+    box-sizing: border-box;
+    animation: coli1 0.3s linear infinite;
+  }
+  .loader::before {
+    top: -4px;
+    transform: rotate(45deg);
+    animation: coli2 0.3s linear infinite;
+  }
+
+@keyframes animFw {
+    0% {
+  width: 0;
+}
+    100% {
+  width: 100%;
+}
+  }
+
+@keyframes coli1 {
+    0% {
+  transform: rotate(-45deg) translateX(0px);
+  opacity: 0.7;
+}
+    100% {
+  transform: rotate(-45deg) translateX(-45px);
+  opacity: 0;
+}
+  }
+
+@keyframes coli2 {
+    0% {
+  transform: rotate(45deg) translateX(0px);
+  opacity: 1;
+}
+    100% {
+  transform: rotate(45deg) translateX(-45px);
+  opacity: 0.7;
+}
+  }
+  
